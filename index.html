@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 工具丛书 - Claude Code & OpenClaw</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🤖 AI 工具丛书</h1>
+            <p>Claude Code 从入门到精通 & OpenClaw 橙皮书</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="book-selector">
+                <button class="book-btn active" data-book="claude-code">
+                    <span class="book-icon">📘</span>
+                    Claude Code
+                </button>
+                <button class="book-btn" data-book="openclaw">
+                    <span class="book-icon">📗</span>
+                    OpenClaw
+                </button>
+            </div>
+
+            <nav class="toc" id="toc">
+                <!-- TOC will be populated by JavaScript -->
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="content-header">
+                <h2 id="chapter-title">选择一本书开始阅读</h2>
+                <div class="breadcrumb" id="breadcrumb"></div>
+            </div>
+            <article class="chapter-content" id="chapter-content">
+                <div class="welcome-message">
+                    <div class="welcome-icon">📚</div>
+                    <h3>欢迎阅读 AI 工具丛书</h3>
+                    <p>选择左侧目录中的书籍和章节开始阅读</p>
+                    <div class="book-cards">
+                        <div class="book-card" onclick="selectBook('claude-code')">
+                            <div class="book-card-icon">📘</div>
+                            <h4>Claude Code</h4>
+                            <p>从入门到精通 v2.0.0</p>
+                            <span class="badge">AI 编程助手</span>
+                        </div>
+                        <div class="book-card" onclick="selectBook('openclaw')">
+                            <div class="book-card-icon">📗</div>
+                            <h4>OpenClaw</h4>
+                            <p>橙皮书 v1.4.0</p>
+                            <span class="badge">AI Agent 平台</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p>📚 AI 工具丛书 | Claude Code v2.1.88+ | OpenClaw v1.4.0 | 构建于 2026</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
