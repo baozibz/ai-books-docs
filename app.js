@@ -1357,7 +1357,7 @@ services:
     ports:
       - "18789:18789"
     environment:
-      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_API_KEY=\${ANTHROPIC_API_KEY}
     volumes:
       - ./data:/app/data
     restart: unless-stopped</code></pre>
@@ -1715,11 +1715,11 @@ openclaw publish</code></pre>
 {
   "providers": {
     "anthropic": {
-      "apiKey": "${ANTHROPIC_API_KEY}",
+      "apiKey": "\${ANTHROPIC_API_KEY}",
       "defaultModel": "claude-sonnet-4-20250514"
     },
     "openai": {
-      "apiKey": "${OPENAI_API_KEY}",
+      "apiKey": "\${OPENAI_API_KEY}",
       "defaultModel": "gpt-4o"
     }
   }
