@@ -1988,11 +1988,17 @@ ollama pull qwen:7b</code></pre>
 let currentBook = 'claude-code';
 let currentChapter = null;
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize - handle both cases: DOM already loaded or not
+function init() {
     renderTOC(currentBook);
     setupBookButtons();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
 
 // Setup book selector buttons
 function setupBookButtons() {
